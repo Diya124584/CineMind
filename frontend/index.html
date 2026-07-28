@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CineMind | AI Movie Discovery</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-film"></i>
+                <span>CineMind</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#discover">Discover</a></li>
+                <li><a href="#ai">AI Picks</a></li>
+                <li><a href="#genres">Genres</a></li>
+                <li><a href="#watchlist">Watchlist</a></li>
+            </ul>
+
+            <div id="authArea"></div>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero" id="hero">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <span class="featured-label">
+                    CINEMIND PICK
+                </span>
+
+                <h1 id="hero-title">
+                    🍿 Getting everything ready...
+                </h1>
+
+                <p id="hero-overview">
+                    Finding something you'll love...
+                </p>
+
+                <div class="movie-meta">
+                    <span id="hero-rating"></span>
+                    <span id="hero-year"></span>
+                </div>
+
+                <div class="hero-buttons">
+
+                    <button type="button" class="watch-btn">
+                        <i class="fa-solid fa-play"></i>
+                        Watch Trailer
+                    </button>
+
+                    <button type="button" class="ai-btn" id="heroBreakdown">
+                        ✨ AI Breakdown
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= AI SEARCH ================= -->
+
+        <section class="ai-search" id="ai">
+
+            <h2>Discover Movies with AI</h2>
+
+            <p>
+                Tell CineMind your mood and let AI find the perfect movie.
+            </p>
+
+            <div class="search-box">
+
+                <input id="aiPrompt"
+                    type="text"
+                    placeholder="e.g. Emotional sci-fi with a happy ending">
+
+                <button type="button" id="searchBtn">
+                    ✨ Discover
+                </button>
+
+            </div>
+
+        </section>
+
+        <section id="aiResults" class="movie-grid"></section>
+
+        <!-- ================= MOODS ================= -->
+
+        <section class="mood-section" id="genres">
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    EXPLORE
+                </span>
+
+                <h2>
+                    What are we watching tonight?
+                </h2>
+
+                <p>
+                    Pick a mood and let CineMind find your perfect movie.
+                </p>
+
+            </div>
+
+            <div class="mood-grid">
+
+                <div class="mood-card movie-night" id="movieNight">
+
+                    <div class="overlay"></div>
+
+                    <div class="content">
+
+                        <h3>🍿 Movie Night</h3>
+                        <p>Blockbusters everyone loves.</p>
+                        <span>Discover →</span>
+
+                    </div>
+
+                </div>
+
+                <div class="mood-card emotional" id="emotional">
+
+                    <div class="overlay"></div>
+
+                    <div class="content">
+
+                        <h3>💔 Emotional</h3>
+                        <p>Movies that stay with you.</p>
+                        <span>Discover →</span>
+
+                    </div>
+
+                </div>
+
+                <div class="mood-card mind" id="mind">
+
+                    <div class="overlay"></div>
+
+                    <div class="content">
+
+                        <h3>🤯 Mind-Blowing</h3>
+                        <p>Twists you'll never forget.</p>
+                        <span>Discover →</span>
+
+                    </div>
+
+                </div>
+
+                <div class="mood-card horror" id="horror">
+
+                    <div class="overlay"></div>
+
+                    <div class="content">
+
+                        <h3>👻 Horror</h3>
+                        <p>Turn off the lights.</p>
+                        <span>Discover →</span>
+
+                    </div>
+
+                </div>
+
+                <div class="mood-card romance" id="romance">
+
+                    <div class="overlay"></div>
+
+                    <div class="content">
+
+                        <h3>💕 Date Night</h3>
+                        <p>Romantic evenings.</p>
+                        <span>Discover →</span>
+
+                    </div>
+
+                </div>
+
+                <div class="mood-card surprise" id="surprise">
+
+                    <div class="overlay"></div>
+
+                    <div class="content">
+
+                        <h3>🎲 Surprise Me</h3>
+                        <p>Something unexpected.</p>
+                        <span>Let's Go →</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= WATCHLIST ================= -->
+
+        <section id="watchlist" class="watchlist-section">
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    PERSONAL
+                </span>
+
+                <h2>
+                    Your Watchlist
+                </h2>
+
+                <p>
+                    Movies you've saved for later.
+                </p>
+
+            </div>
+
+            <div id="watchlistGrid" class="movie-grid"></div>
+
+        </section>
+
+        <!-- ================= WATCHED ================= -->
+
+        <section id="watchedSection" class="watchlist-section">
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    HISTORY
+                </span>
+
+                <h2>
+                    Recently Watched
+                </h2>
+
+                <p>
+                    Movies you've watched.
+                </p>
+
+            </div>
+
+            <div id="watchedGrid" class="movie-grid"></div>
+
+        </section>
+
+        <!-- ================= AI MODAL ================= -->
+
+        <div id="aiModal" class="ai-modal">
+
+            <div class="ai-modal-content">
+
+                <span id="closeAI">&times;</span>
+
+                <h2>🧠 AI Breakdown</h2>
+
+                <p id="aiText"></p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="js/main.js"></script>
+    <script type="module" src="./js/home.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+/* ===============================
+   CINEMIND DESIGN SYSTEM
+=============================== */
+
+:root{
+
+    /* Backgrounds */
+
+    --bg:#090909;
+    --surface:#151515;
+    --surface-2:#1C1C1C;
+
+    /* Brand */
+
+    --primary:#7D1F3A;
+    --primary-hover:#962648;
+
+    --gold:#E8C56B;
+
+    /* Text */
+
+    --text:#F8F8F8;
+    --text-light:#D6D6D6;
+    --text-muted:#9D9D9D;
+
+    /* Borders */
+
+    --border:#2A2A2A;
+
+    /* Shadows */
+
+    --shadow-lg:
+        0 25px 60px rgba(0,0,0,.45);
+
+    --shadow-md:
+        0 15px 35px rgba(0,0,0,.28);
+
+    /* Radius */
+
+    --radius-sm:12px;
+    --radius-md:18px;
+    --radius-lg:28px;
+
+    /* Width */
+
+    --container:1400px;
+
+    /* Transition */
+
+    --transition:.35s ease;
+
+}

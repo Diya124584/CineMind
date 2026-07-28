@@ -1,0 +1,14 @@
+/* ===============================
+   IMPORTS
+=============================== */
+
+@import url("variables.css");
+@import url("reset.css");
+@import url("navbar.css");
+@import url("hero.css");
+@import url("moods.css");
+@import url("responsive.css");
+
+html{
+    scroll-behavior: smooth;
+}

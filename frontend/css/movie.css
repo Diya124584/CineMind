@@ -1,0 +1,355 @@
+:root{
+
+    --primary:#7D1F3A;
+    --primary-hover:#9A284B;
+
+    --gold:#E8C56B;
+
+    --bg:#0F0F10;
+
+    --card:#181818;
+
+    --text:#F5F5F5;
+    --text-light:#F5F5F5;
+
+    --muted:#B0B0B0;
+
+    --transition:.3s ease;
+
+    --shadow-md:0 15px 40px rgba(0,0,0,.25);
+
+    --shadow-lg:0 30px 70px rgba(0,0,0,.45);
+
+}
+body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:Inter,sans-serif;
+}
+
+.movie-hero{
+    position:relative;
+    min-height:100vh;
+    background-size:cover;
+    background-position:center;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to right,
+        rgba(15,15,16,.96),
+        rgba(15,15,16,.75),
+        rgba(15,15,16,.45)
+    );
+}
+
+.movie-container{
+    position:relative;
+    z-index:2;
+    width:min(92%,1200px);
+    margin:auto;
+    padding:190px 0 80px;
+    display:flex;
+    gap:70px;
+    align-items:center;
+}
+
+#poster{
+    width:320px;
+    border-radius:20px;
+    box-shadow:0 25px 60px rgba(0,0,0,.5);
+}
+
+.details{
+    flex:1;
+}
+
+#title{
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+#meta{
+    color:var(--gold);
+    margin-bottom:25px;
+    font-weight:600;
+}
+
+#overview{
+    color:var(--muted);
+    line-height:1.8;
+    max-width:700px;
+    font-size:1.05rem;
+}
+
+.buttons{
+    display:flex;
+    gap:18px;
+    margin-top:35px;
+}
+
+.buttons button{
+    padding:15px 28px;
+    border:none;
+    border-radius:14px;
+    cursor:pointer;
+    font-size:1rem;
+    transition:.3s;
+}
+
+#trailer{
+    background:var(--primary);
+    color:white;
+}
+
+#watchlist{
+    background:var(--gold);
+    color:#111;
+}
+
+.buttons button:hover{
+    transform:translateY(-3px);
+}
+
+.similar{
+    width:min(92%,1400px);
+    margin:80px auto;
+}
+
+.similar h2{
+    margin-bottom:30px;
+}
+
+.movie-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:24px;
+}
+
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    padding:20px 0;
+
+}
+#genres{
+
+    color:var(--gold);
+
+    margin-bottom:25px;
+
+    font-weight:500;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+ul{
+
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+button{
+
+    border:none;
+
+    cursor:pointer;
+
+}
+
+#aiBreakdown{
+
+    background:#232833;
+
+    color:white;
+
+}
+
+#aiBreakdown:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.poster-loader{
+
+    width:300px;
+    height:450px;
+
+    border-radius:20px;
+
+    background:#181818;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+
+}
+
+.loader-spinner{
+
+    width:55px;
+    height:55px;
+
+    border:5px solid rgba(255,255,255,.15);
+
+    border-top:5px solid #ff3d5a;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+}
+
+.poster-loader p{
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    text-align:center;
+
+    opacity:.8;
+
+}
+
+@keyframes spin{
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+.loading-screen{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+    position:relative;
+
+    z-index:2;
+
+    color:white;
+
+}
+
+#movieContent{
+    display:none;
+    width:100%;
+}
+
+.loader-spinner{
+
+    width:60px;
+    height:60px;
+
+    border:5px solid rgba(255,255,255,.15);
+
+    border-top:5px solid #ff3d5a;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+.ai-modal{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.75);
+
+    backdrop-filter: blur(18px);
+-webkit-backdrop-filter: blur(18px);
+
+    z-index:9999;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.ai-modal-content{
+
+    width:min(90%,650px);
+
+    background:#181818;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:white;
+
+    position:relative;
+
+    animation:pop .25s ease;
+
+}
+
+#closeAI{
+
+    position:absolute;
+
+    top:18px;
+
+    right:22px;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+}

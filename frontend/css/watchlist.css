@@ -1,0 +1,361 @@
+/* ================= PAGE ================= */
+
+body{
+    background:#080808;
+    color:#fff;
+    font-family:"Inter",sans-serif;
+}
+
+.watchlist-page{
+
+    max-width:1400px;
+
+    margin:0 auto;
+
+    padding:130px 40px 70px;
+
+}
+
+/* ================= HEADER ================= */
+
+.watchlist-header{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.section-tag{
+
+    display:inline-block;
+
+    color:#3b82f6;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+    margin-bottom:14px;
+
+}
+
+.watchlist-header h1{
+
+    font-size:3.3rem;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+    color:#fff;
+
+}
+
+.watchlist-header p{
+
+    color:#9ca3af;
+
+    font-size:1.05rem;
+
+}
+
+/* ================= GRID ================= */
+
+.watchlist-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,220px);
+
+    justify-content:center;
+
+    gap:32px;
+
+}
+
+/* ================= CARD ================= */
+
+.movie-card{
+
+    background:#141414;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    transition:.3s;
+
+}
+
+.movie-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#2563eb;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.45);
+
+}
+
+/* ================= POSTER ================= */
+
+.movie-card img{
+
+    width:100%;
+
+    aspect-ratio:2/3;
+
+    object-fit:cover;
+
+    display:block;
+
+    cursor:pointer;
+
+}
+
+/* ================= INFO ================= */
+
+.movie-info{
+
+    padding:18px;
+
+}
+
+.movie-info h3{
+
+    font-size:1rem;
+
+    line-height:1.4;
+
+    margin-bottom:16px;
+
+    min-height:46px;
+
+    font-weight:600;
+
+}
+
+/* ================= REMOVE BUTTON ================= */
+
+.remove-btn{
+
+    width:100%;
+
+    padding:11px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#1e293b;
+
+    color:#ff6b6b;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.remove-btn:hover{
+
+    background:#dc2626;
+
+    color:white;
+
+}
+
+/* ================= EMPTY STATE ================= */
+
+.empty{
+
+    grid-column:1/-1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    min-height:55vh;
+
+}
+
+.empty i{
+
+    font-size:70px;
+
+    color:#4b5563;
+
+    margin-bottom:20px;
+
+}
+
+.empty h2{
+
+    font-size:2rem;
+
+    margin-bottom:10px;
+
+}
+
+.empty p{
+
+    color:#9ca3af;
+
+    max-width:450px;
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+.watchlist-page{
+
+    padding:110px 20px 50px;
+
+}
+
+.watchlist-header h1{
+
+    font-size:2.6rem;
+
+}
+
+.watchlist-grid{
+
+    grid-template-columns:repeat(auto-fit,170px);
+
+    gap:22px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.watchlist-header h1{
+
+    font-size:2rem;
+
+}
+
+.watchlist-header p{
+
+    font-size:.95rem;
+
+}
+
+.watchlist-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+}
+
+/* ================= WATCHLIST ================= */
+
+.watchlist-section{
+
+    padding:100px 8%;
+
+}
+
+.empty-watchlist{
+
+    color:#888;
+
+    text-align:center;
+
+    grid-column:1/-1;
+
+}
+
+.remove-btn{
+
+    width:100%;
+
+    margin-top:10px;
+
+    padding:10px;
+
+    background:#222;
+
+    color:#ff6b6b;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+.remove-btn:hover{
+
+    background:#e50914;
+
+    color:white;
+
+}
+
+.watchlist-actions{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:10px;
+
+}
+
+.watched-btn{
+
+    flex:1;
+
+    background:#16a34a;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    padding:8px;
+
+    cursor:pointer;
+
+}
+
+.remove-btn{
+
+    flex:1;
+
+}
+
+.watched-label{
+
+    color:#22c55e;
+
+    font-weight:600;
+
+    margin-top:10px;
+
+}

@@ -1,0 +1,236 @@
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+/* ---------- Large Laptops ---------- */
+
+@media (max-width:1200px){
+
+    .hero{
+
+        height:75vh;
+
+    }
+
+    .hero h1{
+
+        font-size:4rem;
+
+    }
+
+}
+
+
+/* ---------- Tablets ---------- */
+
+@media (max-width:992px){
+
+    header{
+
+        padding:15px 0;
+
+    }
+
+    .navbar{
+
+        padding:16px 22px;
+
+    }
+
+    .nav-links{
+
+        gap:22px;
+
+    }
+
+    .hero{
+
+        margin-top:110px;
+
+        height:70vh;
+
+    }
+
+    .hero-content{
+    left:40px;
+    right:40px;
+    bottom:50px;
+    max-width:500px;
+}
+
+    .hero h1{
+
+        font-size:3.2rem;
+
+    }
+
+    .movie-meta{
+
+        gap:10px;
+
+    }
+
+    .section-header h2{
+
+        font-size:2.5rem;
+
+    }
+
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:768px){
+
+    .navbar{
+
+        padding:16px 18px;
+
+    }
+
+    .nav-links{
+
+        display:none;
+
+    }
+
+    .login-btn{
+
+        padding:10px 20px;
+
+        font-size:.9rem;
+
+    }
+
+    .hero{
+
+        height:65vh;
+
+        border-radius:22px;
+
+        margin-top:100px;
+
+    }
+
+    .hero-content{
+    left:25px;
+    right:25px;
+    bottom:35px;
+    max-width:100%;
+}
+
+    .hero h1{
+
+        font-size:2.5rem;
+
+    }
+
+    .tagline{
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,.82);
+
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+}
+    .movie-meta{
+
+        gap:8px;
+
+    }
+
+    .movie-meta span{
+
+        font-size:.8rem;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+    .watch-btn,
+    .ai-btn{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+    .section-header h2{
+
+        font-size:2rem;
+
+    }
+
+    .mood-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+/* ---------- Small Phones ---------- */
+
+@media (max-width:480px){
+
+    .logo{
+
+        font-size:1.3rem;
+
+    }
+
+    .login-btn{
+
+        display:none;
+
+    }
+
+    .hero{
+
+        height:60vh;
+
+    }
+
+    .hero h1{
+
+        font-size:2rem;
+
+    }
+
+    .featured-label{
+
+        font-size:.75rem;
+
+    }
+
+    .section-header h2{
+
+        font-size:1.7rem;
+
+    }
+
+    .section-header p{
+
+        font-size:.95rem;
+
+    }
+
+    .content h3{
+
+        font-size:1.4rem;
+
+    }
+
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMind | Movie</title>
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/movie.css">
+
+    <script defer type="module" src="js/movie.js"></script>
+    <link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+
+            <i class="fa-solid fa-film"></i>
+
+            <spa>CineMind</span>
+
+        </a>
+
+        <ul class="nav-links">
+
+            <li><a href="index.html#discover">Discover</a></li>
+            <li><a href="index.html#ai">AI Picks</a></li>
+            <li><a href="index.html#genres">Genres</a></li>
+            <li><a href="index.html#watchlist">Watchlist</a></li>
+
+        </ul>
+
+        <button class="login-btn">
+
+            Login
+
+        </button>
+
+    </nav>
+
+</header>
+
+<section class="movie-hero">
+
+    <div class="overlay"></div>
+
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+
+        <div class="loader-spinner"></div>
+
+        <h2>🎬 Setting the scene...</h2>
+
+        <p>Gathering movie details, trailer, and AI insights.</p>
+
+    </div>
+
+    <!-- Movie Content -->
+    <div id="movieContent">
+
+        <div class="movie-container">
+
+            <img id="poster" alt="Movie Poster">
+
+            <div class="details">
+
+                <h1 id="title"></h1>
+
+                <p id="meta"></p>
+
+                <p id="genres"></p>
+
+                <p id="overview"></p>
+
+                <div class="buttons">
+
+                    <button id="trailer">
+                        ▶ Watch Trailer
+                    </button>
+
+                    <button id="watchlist">
+                        ❤️ Watchlist
+                    </button>
+
+                    <button id="aiBreakdown">
+                        ✨ AI Breakdown
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div id="aiModal" class="ai-modal">
+
+    <div class="ai-modal-content">
+
+        <span id="closeAI">&times;</span>
+
+        <h2>🧠 AI Breakdown</h2>
+
+        <p id="aiText"></p>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
