@@ -1,10 +1,12 @@
+require("dotenv").config();
+
 const express = require("express");
 const cors = require("cors");
+
 const watchlistRoutes = require("./routes/watchlistRoutes");
 const movieRoutes = require("./routes/movieRoutes");
 const aiRoutes = require("./routes/aiRoutes");
-
-require("dotenv").config();
+const authRoutes = require("./routes/authRoutes");
 
 require("./config/db");
 
@@ -12,7 +14,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-const authRoutes = require("./routes/authRoutes");
+
 app.use("/api/watchlist", watchlistRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/movies", movieRoutes);
@@ -25,12 +27,10 @@ app.get("/", (req, res) => {
 const verifyToken = require("./middleware/authMiddleware");
 
 app.get("/profile", verifyToken, (req, res) => {
-
-    res.json({
-        message: "Welcome!",
-        user: req.user
-    });
-
+  res.json({
+    message: "Welcome!",
+    user: req.user
+  });
 });
 
 const PORT = process.env.PORT || 5000;

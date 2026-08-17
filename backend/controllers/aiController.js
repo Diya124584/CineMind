@@ -1,5 +1,5 @@
 const db = require("../config/db");
-const gemini = require("../services/geminiService");
+const gemini = require("../services/GroqService");
 const tmdb = require("../services/tmdbService");
 
 exports.recommendMovies = async (req, res) => {
