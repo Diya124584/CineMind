@@ -1,7 +1,7 @@
 const OpenAI = require("openai");
 
 const client = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
+    apiKey: process.env.GROQ_API_KEY,
     baseURL: "https://api.groq.com/openai/v1"
 });
 
@@ -9,7 +9,7 @@ exports.getRecommendations = async (prompt) => {
 
     const response = await client.chat.completions.create({
 
-    model: "llama-3.3-70b-versatile",
+    model: "openai/gpt-oss-20b",
 
     response_format: {
         type: "json_object"
@@ -46,7 +46,7 @@ Return ONLY valid JSON.
     "Movie 5",
     "Movie 6",
     "Movie 7",
-    "Movie 8"
+    "Movie 8",
     "Movie 9",
     "Movie 10",
     "Movie 11",
@@ -84,7 +84,7 @@ exports.getMovieBreakdown = async (
 
     const response = await client.chat.completions.create({
 
-        model: "llama-3.3-70b-versatile",
+        model: "qwen/qwen3.6-27b",
 
         messages: [
 
