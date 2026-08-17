@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5001/api";
+const BASE_URL = "https://cinemind-t7qi.onrender.com/api";
 
 // ================= AUTH =================
 
